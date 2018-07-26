@@ -15,13 +15,13 @@ double getSales(string);
 
 void findHighest(double,double,double,double);
 
-double Northeast = getSales("Northeast");
-double Southeast = getSales("Southeast");
-double Northwest = getSales("Northwest");
-double Southwest = getSales("Southwest");
-
 int main()
 {
+    double Northeast = getSales("Northeast");
+    double Southeast = getSales("Southeast");
+    double Northwest = getSales("Northwest");
+    double Southwest = getSales("Southwest");
+    
     findHighest(Northeast,Southeast,Northwest,Southwest);
     
     return 0;
@@ -51,11 +51,11 @@ void findHighest(double NE,double SE , double NW, double SW)
     max2 = max(NW,SW),
     winner = max(max1,max2);
     
-    if(winner == Northeast) division = "Northeast";
+    if(winner == NE) division = "Northeast";
     
-    else if(winner == Southeast) division = "Southeast";
+    else if(winner == SE) division = "Southeast";
     
-    else if(winner == Northwest) division = "Northwest";
+    else if(winner == NW) division = "Northwest";
     
     else division = "Southwest";
     
